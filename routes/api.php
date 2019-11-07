@@ -24,3 +24,10 @@ Route::post('register' , 'API\UserController@register');
 
 //contact us 
 Route::post('contactus','API\ContactUsController@store');
+
+//Faculities
+Route::post('insert_faculty','API\FacultyController@insert_faculty');
+Route::get('all_faculities','API\FacultyController@all_faculities');
+Route::get('get_faculty','API\FacultyController@get_faculty');
+
+

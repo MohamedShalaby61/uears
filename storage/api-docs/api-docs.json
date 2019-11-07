@@ -5,6 +5,41 @@
         "version": "0.1"
     },
     "paths": {
+        "/contactus": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Contact - username",
+                        "required": true
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "Contact - user email",
+                        "required": true
+                    },
+                    {
+                        "name": "subject",
+                        "in": "path",
+                        "description": "subject",
+                        "required": true
+                    },
+                    {
+                        "name": "message",
+                        "in": "path",
+                        "description": "your message",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "when required fields is not added the response returns validation error , if the message was sent successfully it will return json success message"
+                    }
+                }
+            }
+        },
         "/login": {
             "post": {
                 "operationId": "App\\Http\\Controllers\\API\\UserController::login",
@@ -66,7 +101,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "login with email and password"
+                        "description": "Register a new user with the above params"
                     }
                 }
             }
