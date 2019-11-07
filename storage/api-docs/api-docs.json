@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "User login and register",
+        "version": "0.1"
+    },
+    "paths": {
+        "/login": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\UserController::login",
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "user registered email",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "user Password",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "login with email and password"
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "operationId": "App\\Http\\Controllers\\API\\UserController::register",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "user registered email",
+                        "required": true
+                    },
+                    {
+                        "name": "email",
+                        "in": "path",
+                        "description": "user registered email",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "in": "path",
+                        "description": "user Password",
+                        "required": true
+                    },
+                    {
+                        "name": "phone_number",
+                        "in": "path",
+                        "description": "user registered email",
+                        "required": true
+                    },
+                    {
+                        "name": "DOB",
+                        "in": "path",
+                        "description": "user registered email",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "login with email and password"
+                    }
+                }
+            }
+        }
+    }
+}
